@@ -26,5 +26,8 @@ describe("Binary Number Test Suite", function () {
         expect(n1.toJsNumber()).toBe(1001);
     });
 
+    it("remembers negative number state", function(){
+        expect(new BinaryNumberState(-1).toJsNumber()).toBe(-1);
+    });
 
 });

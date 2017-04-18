@@ -1,13 +1,14 @@
-let BinaryNumberState = require('./binaryNumberState');
+"use strict";
 
+var BinaryNumberState = require('./binaryNumberState');
 
 function borrowBit(number, index) {
     throw "borrowBit is not implemented";
 }
 
 function subImpl(n1, n2) {
-    let result = new BinaryNumberState();
-    
+    var result = new BinaryNumberState();
+
     throw "subImpl is not implemented";
     return result;
 }
@@ -26,3 +27,4 @@ function binarySub(n1, n2) {
 }
 
 module.exports = binarySub;
+//# sourceMappingURL=binarySubtract.js.map

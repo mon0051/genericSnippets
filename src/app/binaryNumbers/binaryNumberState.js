@@ -1,6 +1,6 @@
 function fromJsNumber(number) {
     let bits = [];
-    this.isPositive = (number < 0);
+    this.isPositive = (number > 0);
     if(number < 0){
         number = number * (-1);
     }
@@ -42,7 +42,9 @@ function BinaryNumberState(numberIn){
             }
         });
 
-        return number;
+        if(this.isPositive === true) return number;
+
+        return number * (-1);
     };
 }
 

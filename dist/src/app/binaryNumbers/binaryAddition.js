@@ -13,6 +13,7 @@ function carryBit(number, index) {
 
 function addImpl(n1, n2) {
     var result = new BinaryNumberState();
+    result.isPositive = n1.isPositive;
     result.bits = n1.bits.map(function (x) {
         return x;
     });

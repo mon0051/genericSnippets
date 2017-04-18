@@ -11,6 +11,7 @@ function carryBit(number,index){
 
 function addImpl(n1,n2) {
     let result = new BinaryNumberState();
+    result.isPositive = n1.isPositive;
     result.bits = n1.bits.map(x=>x);
     n2.bits.forEach(function(value,index){
         if(!value) return;
