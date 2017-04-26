@@ -1,4 +1,4 @@
-let binaryAdd = require('../../src/app/binaryNumbers/binaryAddition');
+let binaryAdd = require('../../src/app/binaryNumbers/binaryAdd');
 let BinaryNumberState = require('../../src/app/binaryNumbers/binaryNumberState');
 
 describe("Binary Number Addition",function(){
@@ -28,4 +28,14 @@ describe("Binary Number Addition",function(){
 
         expect(result.toJsNumber()).toBe(12);
     });
+
+    it("even plus negative 6 + -6 = 0", function () {
+        let n1 = new BinaryNumberState(6);
+        let n2 = new BinaryNumberState(-6);
+
+        let result = binaryAdd(n1, n2);
+
+        expect(result.toJsNumber()).toBe(0);
+    });
+
 });

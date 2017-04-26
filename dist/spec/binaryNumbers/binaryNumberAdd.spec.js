@@ -1,6 +1,6 @@
 'use strict';
 
-var binaryAdd = require('../../src/app/binaryNumbers/binaryAddition');
+var binaryAdd = require('../../src/app/binaryNumbers/binaryAdd');
 var BinaryNumberState = require('../../src/app/binaryNumbers/binaryNumberState');
 
 describe("Binary Number Addition", function () {
@@ -29,6 +29,15 @@ describe("Binary Number Addition", function () {
         var result = binaryAdd(n1, n2);
 
         expect(result.toJsNumber()).toBe(12);
+    });
+
+    it("even plus negative 6 + -6 = 0", function () {
+        var n1 = new BinaryNumberState(6);
+        var n2 = new BinaryNumberState(-6);
+
+        var result = binaryAdd(n1, n2);
+
+        expect(result.toJsNumber()).toBe(0);
     });
 });
 //# sourceMappingURL=binaryNumberAdd.spec.js.map

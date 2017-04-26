@@ -30,7 +30,7 @@ function addImpl(n1, n2) {
  *  @param {BinaryNumberState} n2
  *  @return {BinaryNumberState}
  **/
-function binaryMagnitudeIncrease(n1, n2) {
+function binaryIncrease(n1, n2) {
     if (n1.isPositive !== n2.isPositive) {
         throw "Binary Number Sign must be same to add";
     }
@@ -41,5 +41,5 @@ function binaryMagnitudeIncrease(n1, n2) {
     }
 }
 
-module.exports = binaryMagnitudeIncrease;
-//# sourceMappingURL=binaryAddition.js.map
+module.exports = binaryIncrease;
+//# sourceMappingURL=binaryIncrease.js.map

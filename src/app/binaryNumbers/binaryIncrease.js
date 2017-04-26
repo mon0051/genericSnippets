@@ -20,12 +20,16 @@ function addImpl(n1,n2) {
 
     return result;
 }
+
 /**
  *  @param {BinaryNumberState} n1
  *  @param {BinaryNumberState} n2
  *  @return {BinaryNumberState}
  **/
-function binaryAdd(n1,n2){
+function binaryIncrease(n1,n2){
+    if(n1.isPositive !== n2.isPositive){
+        throw "Binary Number Sign must be same to add";
+    }
     if(n1.bits.length > n2.bits.length){
         return addImpl(n1,n2);
     }else{
@@ -33,4 +37,4 @@ function binaryAdd(n1,n2){
     }
 }
 
-module.exports = binaryAdd;
+module.exports = binaryIncrease;

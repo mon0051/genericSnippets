@@ -16,8 +16,19 @@ function fromJsNumber(number) {
 
 }
 
+function fromBinaryNumberState(number){
+    if(number.toString() === "[object BinaryNumberState]"){
+        this.bits = number.bits.slice();
+        this.isPositive = number.isPositive;
+    }else{
+        this.bits = [];
+        this.isPositive = true;
+    }
+}
+
 let converterMap = {
-    'number' : fromJsNumber
+    'number' : fromJsNumber,
+    'object' : fromBinaryNumberState
 };
 
 function BinaryNumberState(numberIn){
@@ -45,6 +56,9 @@ function BinaryNumberState(numberIn){
         if(this.isPositive === true) return number;
 
         return number * (-1);
+    };
+    this.toString = function () {
+        return "[object BinaryNumberState]";
     };
 }
 

@@ -1,30 +1,29 @@
-"use strict";
+'use strict';
 
+var binaryIncrease = require('./binaryIncrease');
+var binaryDecrease = require('./binaryDecrease');
 var BinaryNumberState = require('./binaryNumberState');
 
-function borrowBit(number, index) {
-    throw "borrowBit is not implemented";
-}
-
-function subImpl(n1, n2) {
-    var result = new BinaryNumberState();
-
-    throw "subImpl is not implemented";
-    return result;
-}
-
 /**
- *  @param {BinaryNumberState} n1
- *  @param {BinaryNumberState} n2
+ *  @param n1 {BinaryNumberState}
+ *  @param n2 {BinaryNumberState}
  *  @return {BinaryNumberState}
  **/
-function binarySub(n1, n2) {
-    if (n1.bits.length > n2.bits.length) {
-        return subImpl(n1, n2);
+function binarySubtract(n1, n2) {
+    if (n1.isPositive === n2.isPositive) {
+        var temp = new BinaryNumberState();
+        temp.isPositive = n2.isPositive;
+        temp.bits = n2.bits.slice();
+
+        return binaryDecrease(new BinaryNumberState(n1), temp);
     } else {
-        return subImpl(n2, n1);
+        var _temp = new BinaryNumberState();
+        _temp.isPositive = !n2.isPositive;
+        _temp.bits = n2.bits.slice();
+
+        return binaryIncrease(new BinaryNumberState(n1), _temp);
     }
 }
 
-module.exports = binarySub;
+module.exports = binarySubtract;
 //# sourceMappingURL=binarySubtract.js.map

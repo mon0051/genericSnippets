@@ -42,4 +42,4 @@ function binaryMagnitudeIncrease(n1, n2) {
 }
 
 module.exports = binaryMagnitudeIncrease;
-//# sourceMappingURL=binaryAddition.js.map
+//# sourceMappingURL=binaryMagnitudeIncrease.js.map

@@ -13,11 +13,11 @@ describe("Binary Number Subtraction", function () {
 
     it("even plus odd 6 - 7 = -1", function () {
         let n1 = new BinaryNumberState(6);
-        let n2 = new BinaryNumberState(7);
+        let n2 = new BinaryNumberState(-7);
 
         let result = binarySub(n1, n2);
 
-        expect(result.toJsNumber()).toBe(-1);
+        expect(result.toJsNumber()).toBe(13);
     });
 
     it("even sub even 6 - 16 = -10", function () {
@@ -28,4 +28,40 @@ describe("Binary Number Subtraction", function () {
 
         expect(result.toJsNumber()).toBe(-10);
     });
+
+    it("bigger take smaller",function () {
+        let n1 = new BinaryNumberState(1600);
+        let n2 = new BinaryNumberState(600);
+        
+        let result = binarySub(n1,n2);
+
+        expect(result.toJsNumber()).toBe(1000);
+    });
+
+    it("take nothing",function () {
+        let n1 = new BinaryNumberState(100);
+        let n2 = new BinaryNumberState(0);
+
+        let result = binarySub(n1,n2);
+
+        expect(result.toJsNumber()).toBe(100);
+    });
+
+    it("two negatives cancel" ,function () {
+        let n1 = new BinaryNumberState(-10);
+        let n2 = new BinaryNumberState(-10);
+
+        let result = binarySub(n1, n2);
+
+        expect(result.toJsNumber()).toBe(0);
+    });
+
+    it("negative take positive",function () {
+        let n1 = new BinaryNumberState(-10);
+        let n2 = new BinaryNumberState(10);
+
+        let result = binarySub(n1, n2);
+
+        expect(result.toJsNumber()).toBe(-20);
+    })
 });
