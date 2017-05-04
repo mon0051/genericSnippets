@@ -1,8 +1,8 @@
 'use strict';
 
-var binaryIncrease = require('./simple/binaryIncrease');
-var binaryDecrease = require('./simple/binaryDecrease');
-var BinaryNumberState = require('./binaryNumberState');
+var binaryIncrease = require('./low-level/binaryIncrease');
+var binaryDecrease = require('./low-level/binaryDecrease');
+var BinaryNumberState = require('./low-level/BinaryNumberState');
 
 /**
  *  @param n1 {BinaryNumberState}

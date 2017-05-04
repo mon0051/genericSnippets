@@ -1,4 +1,4 @@
-let BinaryNumberState = require('./binaryNumberState');
+let BinaryNumberState = require('./low-level/BinaryNumberState');
 let binaryAdd = require('./binaryAdd');
 
 function multiImpl(n1,n2){

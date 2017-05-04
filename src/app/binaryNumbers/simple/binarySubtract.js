@@ -1,6 +1,6 @@
-let binaryIncrease = require('./binaryIncrease');
-let binaryDecrease = require('./binaryDecrease');
-let BinaryNumberState = require('./binaryNumberState');
+let binaryIncrease = require('./low-level/binaryIncrease');
+let binaryDecrease = require('./low-level/binaryDecrease');
+let BinaryNumberState = require('./low-level/BinaryNumberState');
 
 /**
  *  @param n1 {BinaryNumberState}

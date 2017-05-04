@@ -1,7 +1,7 @@
-let binaryMulti = require('../../src/app/binaryNumbers/binaryMulti');
-let BinaryNumberState = require('../../src/app/binaryNumbers/binaryNumberState');
+let binaryMulti = require('../../../src/app/binaryNumbers/simple/binaryMulti');
+let BinaryNumberState = require('../../../src/app/binaryNumbers/simple/low-level/BinaryNumberState');
 
-describe("Binary Number Addition", function () {
+describe("Binary Number Multiplication", function () {
     it("5 * 7 = 35", function () {
         let n1 = new BinaryNumberState(5);
         let n2 = new BinaryNumberState(7);
@@ -46,5 +46,4 @@ describe("Binary Number Addition", function () {
 
         expect(result.toJsNumber()).toBe(-36);
     });
-
 });

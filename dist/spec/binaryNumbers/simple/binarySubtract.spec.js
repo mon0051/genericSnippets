@@ -1,7 +1,7 @@
 'use strict';
 
-var binarySub = require('../../src/app/binaryNumbers/simple/binarySubtract');
-var BinaryNumberState = require('../../src/app/binaryNumbers/simple/BinaryNumberState');
+var binarySub = require('../../../src/app/binaryNumbers/simple/binarySubtract');
+var BinaryNumberState = require('../../../src/app/binaryNumbers/simple/low-level/BinaryNumberState');
 
 describe("Binary Number Subtraction", function () {
     it("odd sub odd 5 - 7 = -2", function () {

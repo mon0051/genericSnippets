@@ -33,7 +33,10 @@ var converterMap = {
     'number': fromJsNumber,
     'object': fromBinaryNumberState
 };
-
+/**
+ * @param {BinaryNumberState|number|undefined|null}numberIn
+ * @constructor
+ */
 function BinaryNumberState(numberIn) {
     this.bits = [];
     this.isPositive = false;

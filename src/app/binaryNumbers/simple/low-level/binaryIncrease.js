@@ -1,4 +1,4 @@
-let BinaryNumberState = require('./binaryNumberState');
+let BinaryNumberState = require('./BinaryNumberState');
 
 function carryBit(number,index){
     if(number.bits[index]){

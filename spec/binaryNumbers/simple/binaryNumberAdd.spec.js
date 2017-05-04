@@ -1,5 +1,5 @@
-let binaryAdd = require('../../src/app/binaryNumbers/binaryAdd');
-let BinaryNumberState = require('../../src/app/binaryNumbers/binaryNumberState');
+let binaryAdd = require('../../../src/app/binaryNumbers/simple/binaryAdd');
+let BinaryNumberState = require('../../../src/app/binaryNumbers/simple/low-level/BinaryNumberState');
 
 describe("Binary Number Addition",function(){
     it("odd plus odd 5 + 7 = 12", function () {
