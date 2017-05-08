@@ -1,0 +1,60 @@
+.PageContainer {
+    border: solid 1px #CCC;
+}
+
+.menuDivider {
+    display: none;
+}
+
+.menuItem {
+    padding:       13px;
+    margin:        0;
+    margin-bottom: 0;
+}
+
+#sectionRegion {
+    margin-top: -5px;
+}
+
+.menuItem:first-Child {
+    margin-left: 0;
+}
+
+.PageHeading {
+    background:    linear-gradient(to bottom right, #0177B7, #0E90CD, #00A9E3);
+    border-bottom: 0.1px solid #CCC;
+}
+
+#LoginStatus1 {
+    position: fixed;
+    top:      1px;
+    right:    1px;
+    opacity:  0.7;
+}
+
+.menuItem {
+    border-left: 1px solid #FFF;
+
+}
+
+.menuItem:first-child {
+    border-left: 0;
+}
+
+.menuItem.active {
+    background:    linear-gradient(to bottom right, #0177B7, #00A9E3);
+    border-bottom: 1px solid #00AAFF;
+}
+
+.menuItem:not(.active) {
+    color:         #222;
+    background:    #DDD;
+    border-bottom: 1px solid #DDD;
+
+}
+
+.menuItem.active {
+    opacity:     1;
+    color:       #FFF;
+    border-left: 0;
+}
