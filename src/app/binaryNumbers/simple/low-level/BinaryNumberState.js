@@ -26,6 +26,7 @@ function fromBinaryNumberState(number){
     }
 }
 
+// TODO : Parse from string so we can easily enter numbers by hand
 let converterMap = {
     'number' : fromJsNumber,
     'object' : fromBinaryNumberState
@@ -60,6 +61,20 @@ function BinaryNumberState(numberIn){
 
         return number * (-1);
     };
+    /**
+     *
+     * @param {BinaryNumberState} n2
+     */
+    this.isEqualValue = function (n2) {
+        if(n2.toString() !== "[object BinaryNumberState]"){
+            return false;
+        }
+        return that.bits.every(function (value,index) {
+            return that.bits[index] === n2.bits[index];
+        });
+
+    };
+
     this.toString = function () {
         return "[object BinaryNumberState]";
     };
